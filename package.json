@@ -1,0 +1,22 @@
+{
+  "name": "crons-ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cron"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaio-giovanni/crons-ex.git"
+  },
+  "author": "kaio giovanni",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "node-cron": "^3.0.0"
+  }
+}
