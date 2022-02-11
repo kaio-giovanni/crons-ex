@@ -3,12 +3,12 @@ const express = require("express");
 
 app = express();
 
-// CRON JOB EXECUTANDO DE UM EM UM MINUTO
-cron.schedule("* * * * *", () => console.log("Executando a tarefa a cada 1 minuto"));
+cron.schedule("* * * * *", () => console.log("running the function every minute"));
 
+cron.schedule("0 */1 * * *", () => console.log("running the function every hour"));
 
-cron.schedule("0 */1 * * *", () => {
-    console.log("Só será executado em uma hora e repetirá (de 1 em 1 hora) até ser desativado...");
-});
+cron.schedule("0 12 * * ?", () => console.log("At 12:00 p.m. (noon) every day"));
+
+cron.schedule("15,45 13 ? 6 Tue", () => console.log("At 1:15 p.m. and 1:45 p.m. every Tuesday in the month of June"));
 
 app.listen(3000);
